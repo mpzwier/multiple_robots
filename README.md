@@ -1,6 +1,6 @@
 # Multiple Robots
 
-A multipe (swerve) robots in Gazebo and Rviz with Nav2. Every node/topic/controller are linked to a robot by namespace.
+Multipe (swerve) robots in Gazebo and Rviz with Nav2. Every node/topic/controller are linked to a robot by namespace.
 
 ## Dependencies
 
