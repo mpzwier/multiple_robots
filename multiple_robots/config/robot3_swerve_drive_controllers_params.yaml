@@ -1,6 +1,6 @@
 /**/controller_manager:  #needs to have /**/ for the namespace of multiple robots 
   ros__parameters:
-    update_rate: 1000
+    update_rate: 100
     use_sim_time: true
 
     swerve_drive_controller:
