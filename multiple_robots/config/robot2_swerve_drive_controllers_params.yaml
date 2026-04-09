@@ -1,6 +1,6 @@
 /**/controller_manager:  #needs to have /**/ for the namespace of multiple robots 
   ros__parameters:
-    update_rate: 100
+    update_rate: 200
     use_sim_time: true
 
     swerve_drive_controller:
@@ -14,7 +14,7 @@
 
 # CHANGE TOPIC!
 
-    cmd_vel_topic: /robot2/cmd_vel_smoothed #use the cmd_vel from the velocity smoother
+    cmd_vel_topic: /robot2/cmd_vel_smoothed  #use the cmd_vel from the velocity smoother
     use_stamped_cmd_vel: false #must be false otherwise problems with docking server using the same topic 
     cmd_vel_timeout: 5.0
     
@@ -42,7 +42,7 @@
     enabled_steering_angular_velocity_limit: true # select the shortest steering direciton or not, true or false
     steering_angular_velocity_limit: 100.0 # steering angular velocity [rad/s]
 
-    steering_alignment_angle_error_threshold: 1.0 # wheel stop when the difference b/w current steering angle and target steering angle is below it # [rad] => x * 57.2958 [deg]
+    steering_alignment_angle_error_threshold: 0.1 # wheel stop when the difference b/w current steering angle and target steering angle is below it # [rad] => x * 57.2958 [deg]
     steering_alignment_start_angle_error_threshold: 0.01
     steering_alignment_start_speed_error_threshold: 0.1
     enabled_open_loop: false # use open-loop control or not, true or false

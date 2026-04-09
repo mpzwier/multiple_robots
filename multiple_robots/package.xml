@@ -36,6 +36,9 @@
   <exec_depend>gz_ros2_control</exec_depend>
   <exec_depend>joint_state_broadcaster</exec_depend>
   <exec_depend>ros2controlcli</exec_depend>
+  <exec_depend>scan_mask_filter</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
 
 
 

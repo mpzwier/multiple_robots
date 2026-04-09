@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<robot name="robot1_swerve_bot" xmlns:xacro="http://ros.org/wiki/xacro">
+<robot name="robot4_diff_bot" xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!-- Define steering/wheel xacro -->
-  <xacro:macro name="swerve_module" params="prefix x y">
+  <xacro:macro name="diff_module" params="prefix x y">
 
-    <!-- Swivel -->
-    <link name="${prefix}_swivel_link">
+    <!-- Support -->
+    <link name="${prefix}_support_link">
       <visual>
         <geometry>
           <mesh filename="package://multiple_robots/meshes/Swivel.STL"/>
@@ -26,9 +26,9 @@
       </inertial>
     </link>
 
-    <joint name="${prefix}_steering_joint" type="revolute">
+    <joint name="${prefix}_support_joint" type="fixed">
       <parent link="base_link"/>
-      <child link="${prefix}_swivel_link"/>
+      <child link="${prefix}_support_link"/>
       <origin xyz="${x} ${y} 0.0656" rpy="0 0 0"/>
       <axis xyz="0 0 1"/>
       <limit velocity="100" effort="9999.0" lower="${-pi*6.0}" upper="${pi*6.0}"/>
@@ -57,7 +57,7 @@
     </link>
 
     <joint name="${prefix}_wheel_joint" type="continuous">
-      <parent link="${prefix}_swivel_link"/>
+      <parent link="${prefix}_support_link"/>
       <child link="${prefix}_wheel_link"/>
       <origin xyz="0.0 0.0 -0.0275" rpy="0 0 0"/>
       <axis xyz="0 1 0"/>
@@ -72,7 +72,7 @@
   <link name="base_link">
     <visual>
       <geometry>
-        <mesh filename="package://multiple_robots/meshes/Frame.STL"/>
+        <mesh filename="package://multiple_robots/meshes/Frame_DIFF.STL"/>
       </geometry>
       <material name="Cyan">
         <color rgba="0 1.0 1.0 1.0"/>
@@ -80,8 +80,16 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://multiple_robots/meshes/Frame.STL"/>
+        <mesh filename="package://multiple_robots/meshes/Frame_DIFF.STL"/>
       </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0.001</mu>
+            <mu2>0.001</mu2>
+          </ode>
+        </friction>
+      </surface>
     </collision>
     <inertial>
       <mass value="6.25"/> 
@@ -101,16 +109,9 @@
 
 
   <!-- Use the xacro to create all the steering and wheels -->
-  <xacro:swerve_module prefix="fl" x="0.2555"  y="0.1555"/>
+  <xacro:diff_module prefix="left" x="0.0"  y="0.1"/>
 
-
-  <xacro:swerve_module prefix="fr" x="0.2555"  y="-0.1555"/>
-
-
-  <xacro:swerve_module prefix="rl" x="-0.2555"  y="0.1555"/>
-
-
-  <xacro:swerve_module prefix="rr" x="-0.2555"  y="-0.1555"/>
+  <xacro:diff_module prefix="right" x="0.0"  y="-0.1"/>
 
 
   <link name="imu_link">
@@ -149,8 +150,8 @@
   <joint name="lidar_joint" type="fixed">
     <parent link="base_link"/>
     <child link="lidar_link"/>
-    <!-- <origin xyz="0.2555 0 0.1406" rpy="0.0 0.0 0.0"/> lidar on top--> 
-    <origin xyz="0.2555 0 0.05" rpy="0.0 0.0 0.0"/>  
+    <origin xyz="0.15 0 0.1406" rpy="0.0 0.0 0.0"/> 
+    <!-- <origin xyz="0.15 0 0.05" rpy="0.0 0.0 0.0"/>   -->
   </joint>
   
   <link name="numb_link">
@@ -185,49 +186,13 @@
     <hardware>
       <plugin>gz_ros2_control/GazeboSimSystem</plugin>
     </hardware>
-    <joint name="fl_steering_joint">
-      <command_interface name="position"/>
-      <state_interface name="position"/>
-      <state_interface name="velocity"/>
-      <state_interface name="effort"/>
-    </joint>
-    <joint name="fr_steering_joint">
-      <command_interface name="position"/>
-      <state_interface name="position"/>
-      <state_interface name="velocity"/>
-      <state_interface name="effort"/>
-    </joint>
-    <joint name="rl_steering_joint">
-      <command_interface name="position"/>
-      <state_interface name="position"/>
-      <state_interface name="velocity"/>
-      <state_interface name="effort"/>
-    </joint>
-    <joint name="rr_steering_joint">
-      <command_interface name="position"/>
-      <state_interface name="position"/>
-      <state_interface name="velocity"/>
-      <state_interface name="effort"/>
-    </joint>
-    <joint name="fl_wheel_joint">
+    <joint name="left_wheel_joint">
       <command_interface name="velocity"/>
       <state_interface name="position"/>
       <state_interface name="velocity"/>
       <state_interface name="effort"/>
     </joint>
-    <joint name="fr_wheel_joint">
-      <command_interface name="velocity"/>
-      <state_interface name="position"/>
-      <state_interface name="velocity"/>
-      <state_interface name="effort"/>
-    </joint>
-    <joint name="rl_wheel_joint">
-      <command_interface name="velocity"/>
-      <state_interface name="position"/>
-      <state_interface name="velocity"/>
-      <state_interface name="effort"/>
-    </joint>
-    <joint name="rr_wheel_joint">
+    <joint name="right_wheel_joint">
       <command_interface name="velocity"/>
       <state_interface name="position"/>
       <state_interface name="velocity"/>
@@ -242,7 +207,7 @@
       <always_on>true</always_on>
       <visualize>true</visualize>
       <update_rate>5</update_rate>
-      <topic>robot1/scan</topic>
+      <topic>robot4/scan</topic>
       <gz_frame_id>lidar_link</gz_frame_id>
       <ray>
         <scan>
@@ -272,7 +237,7 @@
       <always_on>true</always_on>
       <update_rate>100</update_rate>
       <visualize>true</visualize>
-      <topic>robot1/imu</topic>
+      <topic>robot4/imu</topic>
       <gz_frame_id>imu_link</gz_frame_id>
       <imu>
         <angular_velocity>
@@ -336,9 +301,9 @@
   <gazebo>
     <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
       <ros>
-        <namespace>robot1</namespace> 
+        <namespace>robot4</namespace> 
       </ros>
-      <parameters>$(find multiple_robots)/config/robot1_swerve_drive_controllers_params.yaml</parameters>
+      <parameters>$(find multiple_robots)/config/robot4_diff_drive_controllers_params.yaml</parameters>
     </plugin>
   </gazebo>
 
