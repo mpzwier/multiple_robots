@@ -17,7 +17,7 @@ This package can be launched by using the command:
 
     ros2 launch multiple_robots robots.launch.py
 
-You can start with goal planning if the Nav2 plugin in Rviz2 shows Navigation and Localization as active
+You can start with goal planning if the Nav2 plugin in Rviz2 shows Navigation and Localization as active. Sometimes due to the large number of nodes to be launched, a single robot fails to launch, try to launch again, most of the time this will help.
 
 ## Acknowledgement
 
