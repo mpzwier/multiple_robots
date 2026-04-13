@@ -26,14 +26,14 @@
 
 # odom0 and imu0 are linked to the topics of the robot, because this is a yaml, namespace for these topics should be set by hand
 # for these topics, so /robot1/......
-        odom0: /robot2/odom
+        odom0: odom
         odom0_config: [false, false, false,
                       false, false, false,
                       true, true, false,
                       false, false, true,
                       false, false, false]
 
-        imu0: /robot2/imu
+        imu0: imu
         imu0_config: [false, false, false,
                       false, false, false,
                       false, false, false,

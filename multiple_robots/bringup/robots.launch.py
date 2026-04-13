@@ -34,66 +34,66 @@ def generate_launch_description():
     # Robots information
 
     robots = [
-        {
-            'name': 'robot1',
-            'controller_type': 'swerve_drive_controller',
-            'x': '0.75',
-            'y': '0.75',
-            'yaw': '1.5708',
-            'model': os.path.join(pkg_share, 'description', 'robot1_swerve_bot.urdf'),
-            'controller': os.path.join(pkg_share, 'config', 'robot1_swerve_drive_controllers_params.yaml'),
-            'nav2': os.path.join(pkg_share, 'config', 'robot1_nav2_params.yaml'),
-            'ekf': os.path.join(pkg_share, 'config', 'robot1_ekf.yaml'),
-            'bridge': os.path.join(pkg_share, 'config', 'robot1_bridge_config.yaml'),
-            'rviz': os.path.join(pkg_share, 'rviz', 'robot1_config.rviz'), 
-            'map': os.path.join(pkg_share, 'config', 'robots_map.yaml'),
-            'scan_mask': os.path.join(pkg_share, 'config', 'scan_mask.yaml')
-        },
-        {
-            'name': 'robot2',
-            'controller_type': 'swerve_drive_controller',
-            'x': '2.45',
-            'y': '0.75',
-            'yaw': '1.5708',
-            'model': os.path.join(pkg_share, 'description', 'robot2_swerve_bot.urdf'),
-            'controller': os.path.join(pkg_share, 'config', 'robot2_swerve_drive_controllers_params.yaml'),
-            'nav2': os.path.join(pkg_share, 'config', 'robot2_nav2_params.yaml'),
-            'ekf': os.path.join(pkg_share, 'config', 'robot2_ekf.yaml'),
-            'bridge': os.path.join(pkg_share, 'config', 'robot2_bridge_config.yaml'),
-            'rviz': os.path.join(pkg_share, 'rviz', 'robot2_config.rviz'), 
-            'map': os.path.join(pkg_share, 'config', 'robots_map.yaml'),   
-            'scan_mask': os.path.join(pkg_share, 'config', 'scan_mask.yaml')        
-        },
-        {
-            'name': 'robot3',
-            'controller_type': 'swerve_drive_controller',
-            'x': '3.90',
-            'y': '0.5',
-            'yaw': '1.5708',
-            'model': os.path.join(pkg_share, 'description', 'robot3_swerve_bot.urdf'),
-            'controller': os.path.join(pkg_share, 'config', 'robot3_swerve_drive_controllers_params.yaml'),
-            'nav2': os.path.join(pkg_share, 'config', 'robot3_nav2_params.yaml'),
-            'ekf': os.path.join(pkg_share, 'config', 'robot3_ekf.yaml'),
-            'bridge': os.path.join(pkg_share, 'config', 'robot3_bridge_config.yaml'),
-            'rviz': os.path.join(pkg_share, 'rviz', 'robot3_config.rviz'), 
-            'map': os.path.join(pkg_share, 'config', 'robots_map.yaml'),
-            'scan_mask': os.path.join(pkg_share, 'config', 'scan_mask.yaml')          
-        }
         # {
-        #     'name': 'robot4',
-        #     'controller_type': 'diff_drive_controller',
+        #     'name': 'robot1',
+        #     'controller_type': 'swerve_drive_controller',
+        #     'x': '0.75',
+        #     'y': '0.75',
+        #     'yaw': '1.5708',
+        #     'model': os.path.join(pkg_share, 'description', 'robot1_swerve_bot.urdf'),
+        #     'controller': os.path.join(pkg_share, 'config', 'robot1_swerve_drive_controllers_params.yaml'),
+        #     'nav2': os.path.join(pkg_share, 'config', 'robot1_nav2_params.yaml'),
+        #     'ekf': os.path.join(pkg_share, 'config', 'robot1_ekf.yaml'),
+        #     'bridge': os.path.join(pkg_share, 'config', 'robot1_bridge_config.yaml'),
+        #     'rviz': os.path.join(pkg_share, 'rviz', 'robot1_config.rviz'), 
+        #     'map': os.path.join(pkg_share, 'config', 'robots_map.yaml'),
+        #     'scan_mask': os.path.join(pkg_share, 'config', 'scan_mask.yaml')
+        # },
+        # {
+        #     'name': 'robot2',
+        #     'controller_type': 'swerve_drive_controller',
+        #     'x': '2.45',
+        #     'y': '0.75',
+        #     'yaw': '1.5708',
+        #     'model': os.path.join(pkg_share, 'description', 'robot2_swerve_bot.urdf'),
+        #     'controller': os.path.join(pkg_share, 'config', 'robot2_swerve_drive_controllers_params.yaml'),
+        #     'nav2': os.path.join(pkg_share, 'config', 'robot2_nav2_params.yaml'),
+        #     'ekf': os.path.join(pkg_share, 'config', 'robot2_ekf.yaml'),
+        #     'bridge': os.path.join(pkg_share, 'config', 'robot2_bridge_config.yaml'),
+        #     'rviz': os.path.join(pkg_share, 'rviz', 'robot2_config.rviz'), 
+        #     'map': os.path.join(pkg_share, 'config', 'robots_map.yaml'),   
+        #     'scan_mask': os.path.join(pkg_share, 'config', 'scan_mask.yaml')        
+        # },
+        # {
+        #     'name': 'robot3',
+        #     'controller_type': 'swerve_drive_controller',
         #     'x': '3.90',
         #     'y': '0.5',
         #     'yaw': '1.5708',
-        #     'model': os.path.join(pkg_share, 'description', 'robot4_diff_bot.urdf'),
-        #     'controller': os.path.join(pkg_share, 'config', 'robot4_diff_drive_controllers_params.yaml'),
-        #     'nav2': os.path.join(pkg_share, 'config', 'robot4_nav2_params.yaml'),
-        #     'ekf': os.path.join(pkg_share, 'config', 'robot4_ekf.yaml'),
-        #     'bridge': os.path.join(pkg_share, 'config', 'robot4_bridge_config.yaml'),
-        #     'rviz': os.path.join(pkg_share, 'rviz', 'robot4_config.rviz'), 
+        #     'model': os.path.join(pkg_share, 'description', 'robot3_swerve_bot.urdf'),
+        #     'controller': os.path.join(pkg_share, 'config', 'robot3_swerve_drive_controllers_params.yaml'),
+        #     'nav2': os.path.join(pkg_share, 'config', 'robot3_nav2_params.yaml'),
+        #     'ekf': os.path.join(pkg_share, 'config', 'robot3_ekf.yaml'),
+        #     'bridge': os.path.join(pkg_share, 'config', 'robot3_bridge_config.yaml'),
+        #     'rviz': os.path.join(pkg_share, 'rviz', 'robot3_config.rviz'), 
         #     'map': os.path.join(pkg_share, 'config', 'robots_map.yaml'),
         #     'scan_mask': os.path.join(pkg_share, 'config', 'scan_mask.yaml')          
         # }
+        {
+            'name': 'robot4',
+            'controller_type': 'diff_drive_controller',
+            'x': '2.45',
+            'y': '0.75',
+            'yaw': '1.5708',
+            'model': os.path.join(pkg_share, 'description', 'robot4_diff_bot.urdf'),
+            'controller': os.path.join(pkg_share, 'config', 'robot4_diff_drive_controllers_params.yaml'),
+            'nav2': os.path.join(pkg_share, 'config', 'robot4_nav2_params.yaml'),
+            'ekf': os.path.join(pkg_share, 'config', 'robot4_ekf.yaml'),
+            'bridge': os.path.join(pkg_share, 'config', 'robot4_bridge_config.yaml'),
+            'rviz': os.path.join(pkg_share, 'rviz', 'robot4_config.rviz'), 
+            'map': os.path.join(pkg_share, 'config', 'robots_map.yaml'),
+            'scan_mask': os.path.join(pkg_share, 'config', 'scan_mask.yaml')          
+        }
     ]
 
     # Gazebo
@@ -125,11 +125,6 @@ def generate_launch_description():
         param_rewrites={'docking_server.dock_database': dock_database_dict},
         convert_types=True
         )      
-
-        # Conditional remapping logic based on the controller type
-        remap_tf = []  # Default: no remapping for tf
-        if robot['controller_type'] == 'diff_drive_controller':  
-            remap_tf = [('/tf', f'/{namespace}/tf')]    
        
         robot_group=GroupAction([
 
@@ -188,7 +183,8 @@ def generate_launch_description():
                 output='screen',
                 namespace=namespace,
                 parameters=[
-                    'params', robot['ekf'],
+                    #'params', robot['ekf'],
+                    robot['ekf'],
                     {'use_sim_time': True},
                 ],
                 remappings=remappings
@@ -220,7 +216,6 @@ def generate_launch_description():
                     '--param-file',
                     robot['controller'],
                 ],
-                remappings=remap_tf,
             ),
 
             # Rivz
@@ -278,3 +273,17 @@ def generate_launch_description():
         *robot_groups,
         
     ])
+
+
+
+
+# Node(
+#     package="topic_tools",
+#     executable="relay",
+#     name="cmd_vel_bridge",
+#     arguments=[
+#         "/robot4/cmd_vel_smoothed",
+#         "/robot4/diff_drive_controller/cmd_vel"
+#     ],
+#     namespace="robot4",
+# ),

@@ -20,7 +20,8 @@ amcl:
     laser_min_range: -1.0
     laser_model_type: "likelihood_field"
     set_initial_pose: true
-    initial_pose: {x: -0.25, y: -3.2, z: 0.0, yaw: 0.0} 
+    initial_pose: {x: 0.0, y: -1.7, z: 0.0, yaw: 0.0} 
+    #initial_pose: {x: -0.25, y: -3.2, z: 0.0, yaw: 0.0} 
     max_beams: 60
     max_particles: 2000
     min_particles: 500
@@ -86,7 +87,7 @@ controller_server:
     controller_plugins: ["FollowPath"]
     odom_topic: odometry/filtered 
     use_realtime_priority: false
-    enable_stamped_cmd_vel: true
+    enable_stamped_cmd_vel: false
 
     progress_checker:
       plugin: "nav2_controller::SimpleProgressChecker"
@@ -203,7 +204,7 @@ local_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.3
+        inflation_radius: 0.35
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
         enabled: True
@@ -261,7 +262,7 @@ global_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
-        inflation_radius: 0.3
+        inflation_radius: 0.35
       always_send_full_costmap: True
 
 planner_server:
@@ -310,7 +311,7 @@ behavior_server:
     max_rotational_vel: 1.0
     min_rotational_vel: 0.4
     rotational_acc_lim: 3.2
-    enable_stamped_cmd_vel: true
+    enable_stamped_cmd_vel: false
 
 waypoint_follower:
   ros__parameters:
@@ -336,7 +337,7 @@ velocity_smoother:
     odom_duration: 0.1
     deadband_velocity: [0.0, 0.0, 0.0]
     velocity_timeout: 1.0
-    enable_stamped_cmd_vel: true
+    enable_stamped_cmd_vel: false
 
 collision_monitor:
   ros__parameters:
@@ -344,7 +345,7 @@ collision_monitor:
     odom_frame_id: odom
     cmd_vel_in_topic: cmd_vel_smoothed
     cmd_vel_out_topic: cmd_vel
-    enable_stamped_cmd_vel: true
+    enable_stamped_cmd_vel: false
     state_topic: "collision_monitor_state"
     transform_tolerance: 0.2
     source_timeout: 1.0
