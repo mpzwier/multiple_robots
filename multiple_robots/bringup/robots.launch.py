@@ -92,7 +92,8 @@ def generate_launch_description():
             'bridge': os.path.join(pkg_share, 'config', 'robot4_bridge_config.yaml'),
             'rviz': os.path.join(pkg_share, 'rviz', 'robot4_config.rviz'), 
             'map': os.path.join(pkg_share, 'config', 'robots_map.yaml'),
-            'scan_mask': os.path.join(pkg_share, 'config', 'scan_mask.yaml')          
+            'scan_mask': os.path.join(pkg_share, 'config', 'scan_mask.yaml'),
+            'stamped': os.path.join(pkg_share, 'config', 'stamped.yaml')          
         }
     ]
 
@@ -173,6 +174,15 @@ def generate_launch_description():
                 namespace=namespace,
                 output='screen',
                 parameters=[robot['scan_mask']],
+            ),
+
+            # TwistStamped
+            Node(
+                package='stamped_filter',
+                executable='stamped_filter_node',
+                namespace=namespace,
+                output='screen',
+                parameters=[robot['stamped']]
             ),
 
             # Localization
