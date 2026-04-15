@@ -14,7 +14,7 @@
 
 # CHANGE TOPIC!
 
-    cmd_vel_topic: /robot3/cmd_vel_smoothed  #use the cmd_vel from the velocity smoother
+    cmd_vel_topic: cmd_vel 
     use_stamped_cmd_vel: false #must be false otherwise problems with docking server using the same topic 
     cmd_vel_timeout: 5.0
     
