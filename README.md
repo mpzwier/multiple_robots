@@ -21,7 +21,8 @@ You can start with goal planning if the Nav2 plugin in Rviz2 shows Navigation an
 
 ## Acknowledgement
 
-This project incorporates code from ROBOTIS AI Worker
+This project incorporates code from ROBOTIS AI Worker and ROS2 control
 
-The swerve drive controller: [ffw_swerve_drive_controller](https://github.com/ROBOTIS-GIT/ai_worker/tree/main/ffw_swerve_drive_controller) is used with the adaptation that the 
-tf are relative and not global (/tf) so that every node/topic is namespace for each robot.
+The swerve drive controller: [ffw_swerve_drive_controller](https://github.com/ROBOTIS-GIT/ai_worker/tree/main/ffw_swerve_drive_controller) is used with the adaptation that the tf are relative and not global (/tf) so that every node/topic is namespace for each robot.
+
+The differential controller is a copy of the ROS2 control diff drive controller, adapted so that the namenspace works properly and tf's are disabled (using tf_dummy) in order for ekf filter to publish the tf's.
