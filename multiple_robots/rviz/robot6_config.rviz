@@ -1,7 +1,7 @@
 Panels:
   - Class: rviz_common/Displays
     Help Height: 0
-    Name: Displays Robot2
+    Name: Displays Robot6
     Property Tree Widget:
       Expanded:
         - /Global Options1
@@ -23,13 +23,15 @@ Panels:
         - /Controller1/Local Costmap1
         - /Controller1/Local Plan1
         - /Controller1/Trajectories1
+        - /Controller1/Trajectories1/Topic1
         - /Controller1/Polygon1
-        - /Realsense1
+        - /Controller1/VoxelGrid1
         - /MarkerArray1
+        - /MarkerArray1/Topic1
         - /MarkerArray2
         - /MarkerArray2/Topic1
       Splitter Ratio: 0.5833333134651184
-    Tree Height: 648
+    Tree Height: 735
   - Class: rviz_common/Selection
     Name: Selection
   - Class: rviz_common/Tool Properties
@@ -79,7 +81,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /robot2/robot_description
+        Value: /robot6/robot_description
       Enabled: true
       Links:
         All Links Enabled: true
@@ -96,22 +98,22 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        fl_swivel_link:
+        left_support_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        fl_wheel_link:
+        left_wheel_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        fr_swivel_link:
+        right_support_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        fr_wheel_link:
+        right_wheel_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -127,26 +129,6 @@ Visualization Manager:
           Show Trail: false
           Value: true
         numb_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rl_swivel_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rl_wheel_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rr_swivel_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rr_wheel_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -170,13 +152,13 @@ Visualization Manager:
           Value: true
         base_link:
           Value: true
-        fl_swivel_link:
+        left_support_link:
           Value: true
-        fl_wheel_link:
+        left_wheel_link:
           Value: true
-        fr_swivel_link:
+        right_support_link:
           Value: true
-        fr_wheel_link:
+        right_wheel_link:
           Value: true
         imu_link:
           Value: true
@@ -188,14 +170,6 @@ Visualization Manager:
           Value: true
         odom:
           Value: true
-        rl_swivel_link:
-          Value: true
-        rl_wheel_link:
-          Value: true
-        rr_swivel_link:
-          Value: true
-        rr_wheel_link:
-          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
@@ -206,11 +180,11 @@ Visualization Manager:
           odom:
             base_footprint:
               base_link:
-                fl_swivel_link:
-                  fl_wheel_link:
+                left_support_link:
+                  left_wheel_link:
                     {}
-                fr_swivel_link:
-                  fr_wheel_link:
+                right_support_link:
+                  right_wheel_link:
                     {}
                 imu_link:
                   {}
@@ -218,12 +192,6 @@ Visualization Manager:
                   {}
                 numb_link:
                   {}
-                rl_swivel_link:
-                  rl_wheel_link:
-                    {}
-                rr_swivel_link:
-                  rr_wheel_link:
-                    {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -256,7 +224,7 @@ Visualization Manager:
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Best Effort
-        Value: /robot2/scan
+        Value: /robot6/scan
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
@@ -289,7 +257,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Best Effort
-        Value: /robot2/mobile_base/sensors/bumper_pointcloud
+        Value: /robot6/mobile_base/sensors/bumper_pointcloud
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
@@ -307,13 +275,13 @@ Visualization Manager:
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /robot2/map
+        Value: /robot6/map
       Update Topic:
         Depth: 5
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /robot2/map_updates
+        Value: /robot6/map_updates
       Use Timestamp: false
       Value: true
     - Class: rviz_common/Group
@@ -332,13 +300,13 @@ Visualization Manager:
             Filter size: 10
             History Policy: Keep Last
             Reliability Policy: Reliable
-            Value: /robot2/global_costmap/costmap
+            Value: /robot6/global_costmap/costmap
           Update Topic:
             Depth: 5
             Durability Policy: Volatile
             History Policy: Keep Last
             Reliability Policy: Reliable
-            Value: /robot2/global_costmap/costmap_updates
+            Value: /robot6/global_costmap/costmap_updates
           Use Timestamp: false
           Value: true
         - Alpha: 0.30000001192092896
@@ -355,13 +323,13 @@ Visualization Manager:
             Filter size: 10
             History Policy: Keep Last
             Reliability Policy: Reliable
-            Value: /robot2/downsampled_costmap
+            Value: /robot6/downsampled_costmap
           Update Topic:
             Depth: 5
             Durability Policy: Volatile
             History Policy: Keep Last
             Reliability Policy: Reliable
-            Value: /robot2/downsampled_costmap_updates
+            Value: /robot6/downsampled_costmap_updates
           Use Timestamp: false
           Value: true
         - Alpha: 1
@@ -390,7 +358,7 @@ Visualization Manager:
             Filter size: 10
             History Policy: Keep Last
             Reliability Policy: Reliable
-            Value: /robot2/plan
+            Value: /robot6/plan
           Value: true
         - Alpha: 1
           Autocompute Intensity Bounds: true
@@ -421,7 +389,7 @@ Visualization Manager:
             Durability Policy: Volatile
             History Policy: Keep Last
             Reliability Policy: Reliable
-            Value: /robot2/global_costmap/voxel_marked_cloud
+            Value: /robot6/global_costmap/voxel_marked_cloud
           Use Fixed Frame: true
           Use rainbow: true
           Value: true
@@ -436,7 +404,7 @@ Visualization Manager:
             Filter size: 10
             History Policy: Keep Last
             Reliability Policy: Reliable
-            Value: /robot2/global_costmap/published_footprint
+            Value: /robot6/global_costmap/published_footprint
           Value: true
       Enabled: true
       Name: Global Planner
@@ -456,13 +424,13 @@ Visualization Manager:
             Filter size: 10
             History Policy: Keep Last
             Reliability Policy: Reliable
-            Value: /robot2/local_costmap/costmap
+            Value: /robot6/local_costmap/costmap
           Update Topic:
             Depth: 5
             Durability Policy: Volatile
             History Policy: Keep Last
             Reliability Policy: Reliable
-            Value: /robot2/local_costmap/costmap_updates
+            Value: /robot6/local_costmap/costmap_updates
           Use Timestamp: false
           Value: true
         - Alpha: 1
@@ -491,7 +459,7 @@ Visualization Manager:
             Filter size: 10
             History Policy: Keep Last
             Reliability Policy: Reliable
-            Value: /robot2/local_plan
+            Value: /robot6/local_plan
           Value: true
         - Class: rviz_default_plugins/MarkerArray
           Enabled: true
@@ -503,7 +471,7 @@ Visualization Manager:
             Durability Policy: Volatile
             History Policy: Keep Last
             Reliability Policy: Reliable
-            Value: /robot2/marker
+            Value: /robot6/marker
           Value: true
         - Alpha: 1
           Class: rviz_default_plugins/Polygon
@@ -516,7 +484,7 @@ Visualization Manager:
             Filter size: 10
             History Policy: Keep Last
             Reliability Policy: Reliable
-            Value: /robot2/local_costmap/published_footprint
+            Value: /robot6/local_costmap/published_footprint
           Value: true
         - Alpha: 1
           Autocompute Intensity Bounds: true
@@ -547,7 +515,7 @@ Visualization Manager:
             Durability Policy: Volatile
             History Policy: Keep Last
             Reliability Policy: Reliable
-            Value: local_costmap/voxel_marked_cloud
+            Value: /robot6/global_costmap/voxel_marked_cloud
           Use Fixed Frame: true
           Use rainbow: true
           Value: true
@@ -614,7 +582,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /robot2/waypoints
+        Value: /robot6/waypoints
       Value: true
     - Class: rviz_default_plugins/MarkerArray
       Enabled: true
@@ -627,7 +595,7 @@ Visualization Manager:
         Durability Policy: Transient Local
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /robot2/route_graph
+        Value: /robot6/route_graph
       Value: true
   Enabled: true
   Global Options:
@@ -683,7 +651,7 @@ Visualization Manager:
       Y: 0
     Saved: ~
 Window Geometry:
-  Displays Robot2:
+  Displays Robot1:
     collapsed: false
   Docking:
     collapsed: false
@@ -692,7 +660,7 @@ Window Geometry:
   Hide Right Dock: false
   Navigation 2:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000400000000000002b90000051dfc020000000dfb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005d00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb000000100044006900730070006c006100790073010000003f000001db0000000000000000fb00000018004e0061007600690067006100740069006f006e00200032010000003f0000024f000001f800fffffffb0000001e005200650061006c00730065006e0073006500430061006d00650072006100000002c6000000c10000001700fffffffb0000002e0044006900730070006c00610079007300200028003c0052004f0042004f0054005f004e0041004d0045003e0029010000023d0000031f0000000000000000fb0000001e0044006900730070006c00610079007300200052006f0062006f0074003101000002fa000002620000000000000000fb0000001e0044006900730070006c00610079007300200052006f0062006f007400320100000294000002c8000000cc00ffffff00000001000001470000051dfc0200000005fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003f0000016e000000a900fffffffb0000000e0044006f0063006b0069006e006701000001b3000002470000016200fffffffb0000001000530065006c006500630074006f007201000004000000015c000000d300fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004420000003efc0100000002fb0000000800540069006d00650100000000000004420000000000000000fb0000000800540069006d00650100000000000004500000000000000000000005f40000051d00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000002b90000051dfc020000000cfb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005d00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb000000100044006900730070006c006100790073010000003f000001db0000000000000000fb00000018004e0061007600690067006100740069006f006e00200032010000003f000001f8000001f800fffffffb0000001e005200650061006c00730065006e0073006500430061006d00650072006100000002c6000000c10000001700fffffffb0000002e0044006900730070006c00610079007300200028003c0052004f0042004f0054005f004e0041004d0045003e0029010000023d0000031f0000000000000000fb0000001e0044006900730070006c00610079007300200052006f0062006f00740031010000023d0000031f000000cc00ffffff00000001000001470000051dfc0200000005fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003f0000016e000000a900fffffffb0000000e0044006f0063006b0069006e006701000001b3000002470000016200fffffffb0000001000530065006c006500630074006f007201000004000000015c000000d300fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004420000003efc0100000002fb0000000800540069006d00650100000000000004420000000000000000fb0000000800540069006d00650100000000000004500000000000000000000005f40000051d00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   RealsenseCamera:
     collapsed: false
   Selection:

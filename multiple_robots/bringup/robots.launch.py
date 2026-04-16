@@ -47,7 +47,7 @@ def generate_launch_description():
             'bridge': os.path.join(pkg_share, 'config', 'robot1_bridge_config.yaml'),
             'rviz': os.path.join(pkg_share, 'rviz', 'robot1_config.rviz'), 
             'map': os.path.join(pkg_share, 'config', 'robots_map.yaml'),
-            'scan_mask': os.path.join(pkg_share, 'config', 'scan_mask.yaml')
+            'scan_mask': os.path.join(pkg_share, 'config', 'scan_mask_swerve_drive.yaml')
         },
         {
             'name': 'robot2',
@@ -62,7 +62,7 @@ def generate_launch_description():
             'bridge': os.path.join(pkg_share, 'config', 'robot2_bridge_config.yaml'),
             'rviz': os.path.join(pkg_share, 'rviz', 'robot2_config.rviz'), 
             'map': os.path.join(pkg_share, 'config', 'robots_map.yaml'),   
-            'scan_mask': os.path.join(pkg_share, 'config', 'scan_mask.yaml')        
+            'scan_mask': os.path.join(pkg_share, 'config', 'scan_mask_swerve_drive.yaml')        
         },
         {
             'name': 'robot3',
@@ -77,7 +77,7 @@ def generate_launch_description():
             'bridge': os.path.join(pkg_share, 'config', 'robot3_bridge_config.yaml'),
             'rviz': os.path.join(pkg_share, 'rviz', 'robot3_config.rviz'), 
             'map': os.path.join(pkg_share, 'config', 'robots_map.yaml'),
-            'scan_mask': os.path.join(pkg_share, 'config', 'scan_mask.yaml')          
+            'scan_mask': os.path.join(pkg_share, 'config', 'scan_mask_swerve_drive.yaml')          
         },
         {
             'name': 'robot4',
@@ -92,9 +92,41 @@ def generate_launch_description():
             'bridge': os.path.join(pkg_share, 'config', 'robot4_bridge_config.yaml'),
             'rviz': os.path.join(pkg_share, 'rviz', 'robot4_config.rviz'), 
             'map': os.path.join(pkg_share, 'config', 'robots_map.yaml'),
-            'scan_mask': os.path.join(pkg_share, 'config', 'scan_mask.yaml'),
+            'scan_mask': os.path.join(pkg_share, 'config', 'scan_mask_diff_drive.yaml'),
             'stamped': os.path.join(pkg_share, 'config', 'stamped.yaml')          
-        }
+        },
+        {
+            'name': 'robot5',
+            'controller_type': 'diff_drive_controller',
+            'x': '6.25',
+            'y': '0.5',
+            'yaw': '1.5708',
+            'model': os.path.join(pkg_share, 'description', 'robot5_diff_bot.urdf'),
+            'controller': os.path.join(pkg_share, 'config', 'robot5_diff_drive_controllers_params.yaml'),
+            'nav2': os.path.join(pkg_share, 'config', 'robot5_nav2_params.yaml'),
+            'ekf': os.path.join(pkg_share, 'config', 'robot5_ekf.yaml'),
+            'bridge': os.path.join(pkg_share, 'config', 'robot5_bridge_config.yaml'),
+            'rviz': os.path.join(pkg_share, 'rviz', 'robot5_config.rviz'), 
+            'map': os.path.join(pkg_share, 'config', 'robots_map.yaml'),
+            'scan_mask': os.path.join(pkg_share, 'config', 'scan_mask_diff_drive.yaml'),
+            'stamped': os.path.join(pkg_share, 'config', 'stamped.yaml')          
+        },
+        {
+            'name': 'robot6',
+            'controller_type': 'diff_drive_controller',
+            'x': '7.5',
+            'y': '0.5',
+            'yaw': '1.5708',
+            'model': os.path.join(pkg_share, 'description', 'robot6_diff_bot.urdf'),
+            'controller': os.path.join(pkg_share, 'config', 'robot6_diff_drive_controllers_params.yaml'),
+            'nav2': os.path.join(pkg_share, 'config', 'robot6_nav2_params.yaml'),
+            'ekf': os.path.join(pkg_share, 'config', 'robot6_ekf.yaml'),
+            'bridge': os.path.join(pkg_share, 'config', 'robot6_bridge_config.yaml'),
+            'rviz': os.path.join(pkg_share, 'rviz', 'robot6_config.rviz'), 
+            'map': os.path.join(pkg_share, 'config', 'robots_map.yaml'),
+            'scan_mask': os.path.join(pkg_share, 'config', 'scan_mask_diff_drive.yaml'),
+            'stamped': os.path.join(pkg_share, 'config', 'stamped.yaml')          
+        },
     ]
 
     # Gazebo

@@ -1,0 +1,11 @@
+/**/scan_mask_node:
+  ros__parameters:
+
+    input_topic: scan_raw 
+    output_topic: scan 
+
+# sectors are angles in radians, 0 is front of robot, direction is counter-clock-wise
+    sectors: [
+      2.4, 3.88,
+      ]
+
