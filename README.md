@@ -2,6 +2,8 @@
 
 Multipe robots (3 swerve drive and 3 diff drive) in Gazebo and Rviz with Nav2. Every node/topic/controller are linked to a robot by namespace.
 
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+
 ## Dependencies
 
 The configurations in this repository assume you have the following prerequisites installed on the
