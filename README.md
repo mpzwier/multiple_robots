@@ -1,6 +1,6 @@
 # Multiple Robots ROS2 
 
-Multipe (swerve) robots in Gazebo and Rviz with Nav2. Every node/topic/controller are linked to a robot by namespace.
+Multipe robots (3 swerve drive and 3 diff drive) in Gazebo and Rviz with Nav2. Every node/topic/controller are linked to a robot by namespace.
 
 ## Dependencies
 
@@ -17,7 +17,7 @@ This package can be launched by using the command:
 
     ros2 launch multiple_robots robots.launch.py
 
-You can start with goal planning if the Nav2 plugin in Rviz2 shows Navigation and Localization as active. Sometimes due to the large number of nodes to be launched, a single robot fails to launch, try to launch again, most of the time this will help.
+You can start with goal planning if the Nav2 plugin in Rviz2 shows Navigation and Localization as active. Sometimes due to the large number of nodes to be launched, a single robot fails to launch, try to launch again, most of the time this will help. TO DO: make the launch a bit more stable
 
 ## Acknowledgement
 
