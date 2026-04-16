@@ -21,8 +21,6 @@ This package can be launched by using the command:
 
 You can start with goal planning if the Nav2 plugin in Rviz2 shows Navigation and Localization as active. Sometimes due to the large number of nodes to be launched, a single robot fails to launch, try to launch again, most of the time this will help. TO DO: make the launch a bit more stable
 
-![alt text](https://github.com/mpzwier/multiple_robots/blob/Jazzy/Rviz.png?raw=true)
-
 ## Acknowledgement
 
 This project incorporates code from ROBOTIS AI Worker and ROS2 control
