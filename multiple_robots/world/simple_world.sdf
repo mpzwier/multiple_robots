@@ -127,7 +127,7 @@
           <cast_shadows>true</cast_shadows>
           <geometry>
             <mesh>
-              <uri>package://multiple_robots/meshes/World_3.STL</uri>
+              <uri>package://multiple_robots/meshes/World_4.STL</uri>
             </mesh>
           </geometry>
           <material>
@@ -140,7 +140,7 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>package://multiple_robots/meshes/World_3.STL</uri>
+              <uri>package://multiple_robots/meshes/World_4.STL</uri>
             </mesh>
           </geometry>
         </collision>

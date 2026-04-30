@@ -22,12 +22,12 @@
         </GoalUpdatedController>
 
         <!-- Follow path with controller + planner switching and hysteresis -->
-        <RecoveryNode number_of_retries="1" name="FollowPathSelector">
+        <RecoveryNode number_of_retries="1" name="FollowPath">
           <ReactiveFallback name="ControllerAndPlannerSelector">
 
             <!-- Short path → OmniController (MPPI) + SmacPlannerHybrid -->
             <Sequence name="ShortDistanceLogic">
-              <IsGoalNearby path="{path}" proximity_threshold="1.0" robot_base_frame="base_footprint"/>
+              <IsPathLengthUnder distance_threshold="1.0" path="{path}"/>
               <PlannerSelector selected_planner="{selected_planner}" default_planner="SmacPlannerHybrid" topic_name="planner_selector"/>
               <FollowPath path="{path}" controller_id="OmniController" error_code_id="{follow_path_error_code}"/>
             </Sequence>
