@@ -42,7 +42,7 @@ def generate_launch_description():
             'yaw': '1.5708',
             'model': os.path.join(pkg_share, 'description', 'robot1_swerve_bot.urdf'),
             'controller': os.path.join(pkg_share, 'config', 'robot1_swerve_drive_controllers_params.yaml'),
-            'nav2': os.path.join(pkg_share, 'config', 'robot1_nav2_params_double.yaml'),
+            'nav2': os.path.join(pkg_share, 'config', 'robot1_nav2_params.yaml'),
             'ekf': os.path.join(pkg_share, 'config', 'robot1_ekf.yaml'),
             'bridge': os.path.join(pkg_share, 'config', 'robot1_bridge_config.yaml'),
             'rviz': os.path.join(pkg_share, 'rviz', 'robot1_config.rviz'), 
